@@ -45,8 +45,8 @@
 												placeholder="Sport name" id="name" name="name">
 										</div>
 										<div class="checkbox">
-											<label> <input type="checkbox" id="command">
-												Command
+											<label> <input type="checkbox" name="command"
+												id="command"> Command
 											</label>
 										</div>
 										<div class="form-group">

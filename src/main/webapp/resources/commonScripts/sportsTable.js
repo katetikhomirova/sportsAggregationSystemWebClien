@@ -17,8 +17,11 @@ function updateSports() {
 								sportArr
 										.push(data[sportCategory].sports[sport].id);
 								sportArr.push(categoryName);
-								sportArr
-										.push(data[sportCategory].sports[sport].isCommand);
+								if (data[sportCategory].sports[sport].isCommand == 1) {
+									sportArr.push("true");
+								} else {
+									sportArr.push("false");
+								}
 								sportArr
 										.push(data[sportCategory].sports[sport].name);
 								dataSet.push(sportArr);
@@ -29,6 +32,10 @@ function updateSports() {
 					if (table) {
 						table.destroy();
 					}
+					var buttons = "<div class=\"btn-group\">"
+							+ "<button type=\"button\" class=\"btn btn-warning buttonEdit\"><i class=\"fa fa-edit\"></i></button>"
+							+ "<button type=\"button\" class=\"btn btn-danger buttonRemove\"><i class=\"fa fa-remove\"></i></button>"
+							+ "</div>";
 					table = $('#sportsTable').DataTable({
 						data : dataSet,
 						columns : [ {
@@ -39,6 +46,8 @@ function updateSports() {
 							title : "Is command"
 						}, {
 							title : "Name"
+						}, {
+							title : ""
 						} ],
 						"paging" : true,
 						"lengthChange" : true,
@@ -46,7 +55,13 @@ function updateSports() {
 						"ordering" : true,
 						"info" : true,
 						"destroy" : true,
-						"autoWidth" : false
+						"autoWidth" : false,
+						"columnDefs" : [ {
+							"targets" : -1,
+							"data" : null,
+							"defaultContent" : buttons,
+							"width" : "9%"
+						} ]
 					});
 				},
 				dataType : "json"

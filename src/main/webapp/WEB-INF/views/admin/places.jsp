@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <%@ include file="../fragment/head.jsp"%>
-<script src="https://maps.googleapis.com/maps/api/js?sensor=false">
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false&language=en">
 	
 </script>
 </head>
@@ -69,20 +69,21 @@
 								<div class="modal-body">
 									<h5 id="mapDescription"></h5>
 									<!-- PLACE FORM -->
-									<form id="sportCategoryForm" method="post"
+									<form id="placesForm" method="post"
 										action="http://localhost:8080/places">
 										<div class="form-group has-feedback">
 											<input type="text" class="form-control"
 												placeholder="Place title" id="nameInput" name="name">
 										</div>
 										<div class="form-group has-feedback">
-											<textarea class="form-control" rows="3"
+											<textarea class="form-control" rows="2"
 												placeholder="Place description" id="descriptionInput"
 												name="description"></textarea>
 										</div>
 
 										<input type="hidden" name="lat" id="latInput" /> <input
-											type="hidden" name="lng" id="lngInput" />
+											type="hidden" name="lng" id="lngInput" /><input
+											type="hidden" name="address" id="addresForm" />
 									</form>
 									<!-- /PLACE FORM -->
 									<!-- SEARCH LOCATION ADDRESS -->
@@ -119,8 +120,8 @@
 							<div class="box-body">
 								<!-- Button trigger modal -->
 								<button type="button" class="btn btn-success"
-									data-toggle="modal" data-target="#addPlaceMapModal">Add
-									new place</button>
+									data-toggle="modal" data-target="#addPlaceMapModal"
+									id="addNewPlaceButton">Add new place</button>
 								<hr />
 								<table id="citiesTable"
 									class="table table-bordered table-striped">
