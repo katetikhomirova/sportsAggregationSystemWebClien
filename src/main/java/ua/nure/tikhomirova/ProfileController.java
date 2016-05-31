@@ -22,7 +22,7 @@ public class ProfileController {
 					else {
 						switch (c.getValue()) {
 							case "1" :
-								return "admin";
+								return "user/profile";
 						}
 						// return "profile";
 					}

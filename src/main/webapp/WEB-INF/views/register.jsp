@@ -36,31 +36,56 @@
 		</div>
 		<!-- /.login-logo -->
 		<div class="login-box-body">
-			<p class="login-box-msg">Sign in to start your session</p>
+			<p class="login-box-msg">Sign up to start your session</p>
 
-			<form id="loginForm" method="post" action="http://localhost:8080/users/signin">
+			<form id="loginForm" method="post"
+				action="http://localhost:8080/users/signin">
 				<div class="form-group has-feedback">
-					<input type="text" class="form-control" placeholder="Login"
-						id="login" name="login"> <span
-						class="glyphicon glyphicon glyphicon-user form-control-feedback"></span>
+					<label for="login">Login</label> <input type="text"
+						class="form-control" placeholder="Login" id="login" name="login">
+
 				</div>
 				<div class="form-group has-feedback">
-					<input type="password" class="form-control" placeholder="Password"
-						id="password" name="password"> <span
-						class="glyphicon glyphicon-lock form-control-feedback"></span>
+					<label for="email">Email</label> <input type="email"
+						class="form-control" placeholder="Email" id="email" name="email">
+				</div>
+				<div class="form-group has-feedback">
+					<label for="password">Password</label> <input type="password"
+						class="form-control" placeholder="Password" id="password"
+						name="password">
+				</div>
+				<div class="form-group has-feedback">
+					<label for="repeatPassword">Repeat password</label> <input
+						type="password" class="form-control" placeholder="Password"
+						id="password" name="repeatPassword">
+				</div>
+				<div class="form-group">
+					<label>Select your gender:</label>
+					<div class="radio">
+						<label> <input type="radio" name="optionsRadios"
+							id="optionsRadios1" value="option1" checked>Male
+						</label>
+					</div>
+					<div class="radio">
+						<label> <input type="radio" name="optionsRadios"
+							id="optionsRadios2" value="option2"> Female
+						</label>
+					</div>
+				</div>
+				<div class="checkbox">
+					<label> <input type="checkbox" name="command" id="command">
+						Sport competition organizator?
+					</label>
 				</div>
 				<div class="row">
 					<!-- /.col -->
 					<div class="col-xs-12">
 						<button type="submit" class="btn btn-primary btn-block btn-flat">Sign
-							In</button>
+							Up</button>
 					</div>
 					<!-- /.col -->
 				</div>
 			</form>
-
-			<a href="#">I forgot my password</a><br> <a href="register.html"
-				class="text-center">Register a new membership</a>
 
 		</div>
 		<!-- /.login-box-body -->
