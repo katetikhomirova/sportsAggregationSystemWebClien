@@ -30,8 +30,11 @@ $('#loginForm').ajaxForm({
 				// forEach(data, function(key, value) {
 				// alert(key + ': ' + value)
 				// })
-				if (data.userrole.id != null) {
-					window.location.href = "profile";
+				if (document.cookie.role = 1) {
+					window.location.href = "sports";
+				}
+				if (document.cookie.role = 3) {
+					window.location.href = "newCompetition";
 				}
 			}
 		});
